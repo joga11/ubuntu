@@ -59,6 +59,7 @@ nav a:hover {
         font-size: 24px;
     }
 }
+
 /* Zmiana koloru aktywnej podstrony */
 .active {
     background-color: dimgray;
@@ -183,10 +184,17 @@ span.tekst-kodu {
     font-size: 18px;
     font-family: "Courier New"
 }
+/* a klasa link-kodu - formatowanie tekstu dla wyróżnienia ciągu kodu z hiperłączem */
+a.link-kodu {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-family: "Courier New";
+}
 
 /* animacja Loading */
 :root {
-    --color: rgb(57, 170, 42);
+    --color: rgb(57, 170, 42); /* kolor wypełniający */
 }
 
 .loading-animation {
@@ -208,7 +216,7 @@ span.tekst-kodu {
     animation: loading 12s linear infinite;
 }
 
-@keyframes loading {
+@keyframes loading {  /* animacja */
     0% {
       width: 0%;
     }

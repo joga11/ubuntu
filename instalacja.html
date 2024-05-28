@@ -63,12 +63,13 @@
                                 <p><span class="tekst-kodu">bash<br>
                                 Skopiuj kod<br>
                                 sudo sh -c 'echo "deb [arch=amd64]<br>
-                                https://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib" >> /etc/apt/sources.list.d/virtualbox.list'</span></p>
+                                    <!-- a klasa link-kodu - formatowanie tekstu dla wyróżnienia ciągu kodu z hiperłączem -->
+                                <a class="link-kodu" href="https://download.virtualbox.org/virtualbox/debian">https://download.virtualbox.org/virtualbox/debian</a> $(lsb_release -cs) contrib" >> /etc/apt/sources.list.d/virtualbox.list'</span></p>
                             <h4>2. Dodaj klucz publiczny Oracle:</h4>
                                 <p><span class="tekst-kodu">bash<br>
                                 Skopiuj kod<br>
-                                wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -<br>
-                                wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -</span></p>
+                                wget -q <a class="link-kodu" href="https://www.virtualbox.org/download/oracle_vbox_2016.asc">https://www.virtualbox.org/download/oracle_vbox_2016.asc</a> -O- | sudo apt-key add -<br>
+                                wget -q <a class="link-kodu" href="https://www.virtualbox.org/download/oracle_vbox.asc">https://www.virtualbox.org/download/oracle_vbox.asc</a> -O- | sudo apt-key add -</span></p>
                             <h4>3. Zaktualizuj listę pakietów i zainstaluj VirtualBox:</h4>
                                 <p><span class="tekst-kodu">bash<br>
                                 Skopiuj kod<br>
