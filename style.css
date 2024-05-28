@@ -1,0 +1,233 @@
+* {
+    margin: 0; 
+    padding: 0;
+    font-family: Teachers, arial;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+#wrapper {
+    max-width:1024px;
+    margin: 0 auto;
+    background-color: black;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    max-height: 288px;
+    display: block;       
+}
+
+nav {
+    overflow: hidden;
+}
+/* Przyciski nawigacyjne */
+nav a {
+    display: block;
+    width: 25%;
+    float: left;
+    color: rgb(81, 192, 67);
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: black;
+    padding: 15px 30px;
+    font-size: 20px;
+    -webkit-transition: all 2s ease;
+    transition: all 2s ease;       
+}
+/* Zmiana koloru przycisku nawigacyjnego na szary po dotknięciu */
+nav a:hover {
+    background-color: dimgray;
+    cursor: pointer;    
+}
+/* Zmiana sposobu wyświetlania w zależności od rozmiaru ekranu */
+@media (max-width:800px){
+    nav a {
+        width: 50%;
+        font-size: 22px;
+    }
+}
+
+@media (max-width:600px){
+    nav a {
+        width: 100%;
+        font-size: 24px;
+    }
+}
+/* Zmiana koloru aktywnej podstrony */
+.active {
+    background-color: dimgray;
+}
+
+article {
+    margin-top:20px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+/* Nagłówki h1, h2, h3, h4 */
+article h1 {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin: 0 20% 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid dimgray;   
+}
+article h2 {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: left;
+    margin: 30px;
+}
+
+article h3 {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    text-align: left;
+    margin: 20px 55px;
+}
+
+article h4 {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    margin: 20px 30px;
+}
+
+section {
+    text-align: center;
+    margin: 0 auto;
+}
+/* Akapit */
+article p {
+    color: white;
+    text-align: justify;
+    line-height: 25px;
+    font-size: 18px;
+    padding: 15px 30px;    
+}
+/* Obrazek umieszczony w akapicie wyrównany do lewej, pingwin z procą w pliku info-o-ubuntu.html */
+img.left {
+    float:left;
+    margin: 0px 10px 10px 0;
+    width: 40%;
+}
+/* Obrazek wyśrodkowany, gif z pingwinem w pliku instalacja.html */
+img.center {
+    margin: 20px -40px;
+    width: 100%;
+    border-radius: 6%;
+    text-align: center; 
+}
+/* Lista nienumerowana */
+ul {
+    color: white;
+    list-style-type: circle;
+    text-align: left;
+    line-height: 25px;
+    font-size: 18px;
+    margin: 20px 90px;   
+}
+/* Lista numerowana */
+ol {
+    color: white;
+    text-align: left;
+    line-height: 25px;
+    font-size: 18px;
+    margin: 20px 90px;   
+}
+/* Przycisk ikona powrotu na stronę główną, zielony domek */
+.home {
+    
+    text-align: center;
+    margin-top:30px;
+    margin-bottom: 20px;
+    width: 75px;
+    height: 75px;
+}
+/* span klasa komendy - formatowanie tekstu dla wyróżnienia komend */
+span.komendy {
+    color: rgb(81, 192, 67);
+    font-size: 24px;
+    font-family: "Courier New"
+}
+/* span klasa tekst-bold-klawisze - formatowanie tekstu dla wyróżnienia nazw klawiszy fizycznych/klawiatury */
+span.tekst-bold-klawisze {
+    color: yellow;
+    font-size: 18px;
+    font-weight: bold;
+}
+/* span klasa tekst-bold-ui - formatowanie tekstu dla wyróżnienia nazw elementów interfejsu użytkownika, przycisków oprogramowania, opcji menu itp. */
+span.tekst-bold-ui {
+    color: cyan;
+    font-size: 18px;
+    font-weight: bold;
+}
+/* span klasa tekst-bold-sys-op - formatowanie tekstu dla wyróżnienia nazw systemów operacyjnych */
+span.tekst-bold-sys-op {
+    color: crimson;
+    font-size: 18px;
+    font-weight: bold;
+}
+/* span klasa tekst-kodu - formatowanie tekstu dla wyróżnienia ciągu kodu */
+span.tekst-kodu {
+    font-size: 18px;
+    font-family: "Courier New"
+}
+
+/* animacja Loading */
+:root {
+    --color: rgb(57, 170, 42);
+}
+
+.loading-animation {
+    position: relative;
+    display: inline-block;
+    font-size: 5.5rem;
+    font-weight: 700;
+    letter-spacing: 0,2rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+.loading-animation::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--color);
+    overflow: hidden;
+    width: 0%;
+    animation: loading 12s linear infinite;
+}
+
+@keyframes loading {
+    0% {
+      width: 0%;
+    }
+    
+    100% {
+      width: 100%;
+    }
+  }
+  
+iframe {
+    margin: 10px auto 50px;
+}
+
+footer {
+    height: 40px;
+    background-color: black;
+    color: rgb(81, 192, 67);
+    line-height: 40px;
+    text-align: center;
+    margin-top: 60px;
+}
+

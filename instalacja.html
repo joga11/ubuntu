@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <!-- kodowanie polskich znaków -->
+        <meta charset="UTF-8">
+        <!-- sposób wyświetlania na urządzenich mobilnych -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- tytuł strony, m.in. w wynikach wyszukiwania-->
+        <title>Ubuntu</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+        <link rel="icon" href="favicon.ico">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <header>
+                <img src="linux_green_3.jpg" alt="Linux pingwin"/>
+            </header>
+            <nav>
+                <a class="menu" href="info-o-ubuntu.html">INFO o UBUNTU</a>
+                <a class="menu" href="wprowadzenie.html">WPROWADZENIE</a>
+                <a class="menu" href="konsola.html">KONSOLA</a>
+                <a class="menu active" href="instalacja.html">INSTALACJA</a>
+            </nav>
+            <section>
+                <center><div class="home">
+                            <a href="index.html">
+                        <img src="green_home.jpg" width=50px height=50px alt="Linux pingwin"/>
+                            </a>
+                        </div>
+                </center>
+                <article>
+                    <h1>Instalacja maszyny wirtualnej VirtualBox z systemem Linux Ubuntu</h1>
+                        <h2>1. Pobranie i instalacja VirtualBox</h2>
+                    <!-- span klasa tekst-bold-sys-op - formatowanie tekstu dla wyróżnienia nazw systemów operacyjnych -->
+                                <p><span class="tekst-bold-sys-op">Windows:</span></p>
+                            <h4>1. Pobierz VirtualBox:</h4>
+                                    <ul>
+                                        <li>Przejdź na stronę pobierania VirtualBox: VirtualBox Download <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox Download</a></li>
+                                        <li>Pobierz odpowiednią wersję dla systemu Windows.</li>
+                                    </ul>
+                            <h4>2. Zainstaluj VirtualBox:</h4>
+                                    <ul>
+                                        <li>Otwórz pobrany plik instalacyjny i postępuj zgodnie z instrukcjami instalatora.</li>
+                                    </ul>
+                                <p><span class="tekst-bold-sys-op">macOS:</span></p>
+                            <h4>1. Pobierz VirtualBox:</h4>
+                                    <ul>
+                                        <li>Przejdź na stronę pobierania VirtualBox: VirtualBox Download.</li>
+                                        <li>Pobierz odpowiednią wersję dla systemu macOS.</li>
+                                    </ul>
+                            <h4>2. Zainstaluj VirtualBox:</h4>
+                                    <ul>
+                                        <li>Otwórz pobrany plik DMG i przeciągnij ikonę VirtualBox do folderu Aplikacje.</li>
+                                    </ul>
+                                <p><span class="tekst-bold-sys-op">Linux (Ubuntu):</span></p>
+                            <h4>1. Dodaj repozytorium Oracle VirtualBox:</h4>
+                                <p>Otwórz terminal i dodaj repozytorium Oracle:</p>
+                    <!-- span klasa tekst-kodu - formatowanie tekstu dla wyróżnienia ciągu kodu -->
+                                <p><span class="tekst-kodu">bash<br>
+                                Skopiuj kod<br>
+                                sudo sh -c 'echo "deb [arch=amd64]<br>
+                                https://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib" >> /etc/apt/sources.list.d/virtualbox.list'</span></p>
+                            <h4>2. Dodaj klucz publiczny Oracle:</h4>
+                                <p><span class="tekst-kodu">bash<br>
+                                Skopiuj kod<br>
+                                wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -<br>
+                                wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -</span></p>
+                            <h4>3. Zaktualizuj listę pakietów i zainstaluj VirtualBox:</h4>
+                                <p><span class="tekst-kodu">bash<br>
+                                Skopiuj kod<br>
+                                sudo sh -c 'echo "deb [arch=amd64]<br>
+                                sudo apt update<br>
+                                sudo apt install virtualbox-6.1</span></p>
+                        <h2>2. Pobranie obrazu ISO Ubuntu</h2>
+                            <h4>1. Pobierz Ubuntu:</h4>
+                                    <ul>
+                                        <li>Przejdź na stronę pobierania Ubuntu: <a href="https://ubuntu.com/download">Ubuntu Download</a></li>
+                                        <li>Pobierz obraz ISO odpowiedniej wersji (np. Ubuntu 22.04 LTS).</li>
+                                    </ul>
+                        <h2>3. Utworzenie Nowej Maszyny Wirtualnej</h2>
+                            <h4>1. Uruchom VirtualBox:</h4>
+                                    <ul>
+                                        <li>Otwórz aplikację VirtualBox.</li>
+                                    </ul>
+                            <h4>2. Utwórz nową maszynę wirtualną:</h4>
+                                    <ul>
+                                        <li>Kliknij przycisk "<span class="tekst-bold-ui">New</span>" (Nowa).</li>
+                                        <li>Nadaj nazwę maszynie (np. "Ubuntu VM") i wybierz typ oraz wersję systemu operacyjnego (Linux, Ubuntu 64-bit).</li>
+                                        <li>Kliknij przycisk "<span class="tekst-bold-ui">Next</span>" (Dalej).</li>
+                                    </ul>
+                            <h4>3. Przydziel pamięć RAM:</h4>
+                                    <ul>
+                                        <li>Przypisz odpowiednią ilość pamięci RAM (zalecane minimum to 2048 MB, ale najlepiej 4096 MB, jeśli masz więcej pamięci).</li>
+                                        <li>Kliknij przycisk "<span class="tekst-bold-ui">Next</span>" (Dalej).</li>
+                                    </ul>
+                            <h4>4. Utwórz wirtualny dysk twardy:</h4>
+                                    <ul>
+                                        <li>Wybierz opcję "<span class="tekst-bold-ui">Create a virtual hard disk now</span>" (Utwórz wirtualny dysk twardy teraz).</li>
+                                        <li>Kliknij "<span class="tekst-bold-ui">Create</span>" (Utwórz).</li>
+                                    </ul>
+                            <h4>5. Wybierz typ pliku dysku:</h4>
+                                    <ul>
+                                        <li>Wybierz <span class="tekst-bold-ui">VDI (VirtualBox Disk Image)</span>.</li>
+                                        <li>Kliknij "<span class="tekst-bold-ui">Next</span>" (Dalej).</li>
+                                    </ul>
+                            <h4>6. Dynamicznie przydzielany lub stały rozmiar:</h4>
+                                    <ul>
+                                        <li>Wybierz <span class="tekst-bold-ui">Dynamically allocated</span> (Dynamicznie przydzielany).</li>
+                                        <li>Kliknij "<span class="tekst-bold-ui">Next</span>" (Dalej).</li>
+                                    </ul>
+                            <h4>7. Przydziel rozmiar dysku:</h4>
+                                    <ul>
+                                        <li>Ustal rozmiar wirtualnego dysku (zalecane minimum to 20 GB).</li>
+                                        <li>Kliknij "<span class="tekst-bold-ui">Create</span>" (Utwórz).</li>
+                                    </ul>
+                         <h2>4. Instalacja Ubuntu na Maszynie Wirtualnej</h2>
+                            <h4>1. Skonfiguruj nośnik startowy:</h4>
+                                    <ul>
+                                        <li>Zaznacz nowo utworzoną maszynę wirtualną i kliknij "<span class="tekst-bold-ui">Settings</span>" (Ustawienia).</li>
+                                        <li>Przejdź do sekcji "<span class="tekst-bold-ui">Storage</span>" (Pamięć).</li>
+                                        <li>Wybierz kontroler IDE i kliknij ikonę dyskietki, aby dodać plik ISO.</li>
+                                        <li>Kliknij "<span class="tekst-bold-ui">Choose a disk file</span>" (Wybierz plik dysku) i wskaż pobrany obraz ISO Ubuntu.</li>
+                                    </ul>
+                            <h4>2. Uruchom maszynę wirtualną:</h4>
+                                    <ul>
+                                        <li>Kliknij "<span class="tekst-bold-ui">Start</span>" (Uruchom).</li>
+                                    </ul>
+                            <h4>3. Zainstaluj Ubuntu:</h4>
+                                    <ul>
+                                        <li>Po uruchomieniu maszyny wirtualnej z obrazu ISO, pojawi się instalator Ubuntu.</li>
+                                        <li>Wybierz "<span class="tekst-bold-ui">Install Ubuntu</span>" (Zainstaluj Ubuntu).</li>
+                                        <li>Postępuj zgodnie z instrukcjami instalatora, aby skonfigurować system (wybierz język, układ klawiatury, ustawienia sieciowe, utwórz konto użytkownika itp.)</li>
+                                    </ul>
+                            <h4>4. Zakończenie instalacji:</h4>
+                                    <ul>
+                                        <li>Po zakończeniu instalacji zrestartuj maszynę wirtualną.</li>
+                                        <li>Usuń plik ISO z nośnika startowego w ustawieniach maszyny wirtualnej.</li>
+                                    </ul>
+                        <h2>5. Dodatkowe ustawienia i dostosowania</h2>
+                            <h4>1. Zainstaluj dodatki gościa VirtualBox:</h4>
+                                    <ul>
+                                        <li>Uruchom maszynę wirtualną z Ubuntu.</li>
+                                        <li>W menu VirtualBox wybierz <span class="tekst-bold-ui">Devices > Insert Guest Additions CD Image...</span> (Urządzenia > Wstaw obraz CD z dodatkami gościa).</li>
+                                        <li>Otwórz terminal w Ubuntu i zainstaluj dodatki gościa:<br><span class="tekst-kodu">bash<br>
+                                        Skopiuj kod<br>
+                                        sudo apt update<br>
+                                        sudo apt install build-essential dkms linux-headers-$(uname -r)<br>
+                                        sudo sh /media/username/VBox_GAs_*/VBoxLinuxAdditions.run</span></li>
+                                        <li>Zrestartuj maszynę wirtualną.</li>
+                                    </ul>
+                            <h4>2. Dostosuj ustawienia maszyny wirtualnej:</h4>
+                                    <ul>
+                                        <li>Zwiększ pamięć wideo w ustawieniach maszyny wirtualnej.</li>
+                                        <li>Skonfiguruj wspólne foldery, jeśli chcesz wymieniać pliki między hostem a maszyną wirtualną.</li>
+                                    </ul>
+                            <p>To powinno wystarczyć, aby uruchomić i skonfigurować maszynę wirtualną VirtualBox z systemem Linux Ubuntu. Jeśli napotkasz problemy lub masz dodatkowe pytania, chętnie pomogę!</p>
+                            <img class="center" src="linux.gif" alt="Pingwin Tux" />
+                </article>
+            </section>
+            <footer>Marian Gajewski, Dawid Pozorski, 1I2. 2024</footer>
+        </div>
+    </body>
+</html>

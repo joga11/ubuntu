@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <!-- kodowanie polskich znaków -->
+        <meta charset="UTF-8">
+        <!-- sposób wyświetlania na urządzenich mobilnych -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- tytuł strony, m.in. w wynikach wyszukiwania-->
+        <title>Ubuntu</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+        <link rel="icon" href="favicon.ico">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <header>
+                <img src="linux_green_3.jpg" alt="Linux pingwin"/>
+            </header>
+            <nav>
+                <a class="menu" href="info-o-ubuntu.html">INFO o UBUNTU</a>
+                <a class="menu active" href="wprowadzenie.html">WPROWADZENIE</a>
+                <a class="menu" href="konsola.html">KONSOLA</a>
+                <a class="menu" href="instalacja.html">INSTALACJA</a>
+            </nav>
+            <section>
+                <center><div class="home">
+                            <a href="index.html">
+                        <img src="green_home.jpg" width=50px height=50px alt="Linux pingwin"/>
+                            </a>
+                        </div>
+                </center>
+                <article>
+                    <h1>Wprowadzenie do Systemu Linux Ubuntu</h1>
+                    <p>Linux Ubuntu to popularna dystrybucja systemu operacyjnego Linux, znana z przyjaznego interfejsu użytkownika, stabilności oraz dużej społeczności użytkowników. Jest często wykorzystywana zarówno na komputerach osobistych, jak i na serwerach.</p>
+                    <h2>1. Podstawowe komendy Linux</h2>
+                    <h3>1.1. Nawigacja w systemie plików:</h3>
+                    <!-- span klasa komendy - formatowanie tekstu dla wyróżnienia komend -->
+                    <ul>
+                        <li><span class="komendy">pwd</span> - Wyświetla bieżący katalog.</li>
+                        <li><span class="komendy">ls</span> - Wyświetla zawartość katalogu.</li>
+                        <li><span class="komendy">cd</span> - Zmienia katalog.</li>
+                        <li><span class="komendy">mkdir</span> - Tworzy nowy katalog.</li>
+                        <li><span class="komendy">rmdir</span> - Usuwa pusty katalog.</li>
+                    </ul>
+                    <h3>1.2. Operacje na plikach:</h3>
+                    <ul>
+                        <li><span class="komendy">touch</span> - Tworzy nowy, pusty plik.</li>
+                        <li><span class="komendy">cp</span> - Kopiuje plik lub katalog.</li>
+                        <li><span class="komendy">mv</span> - Przenosi lub zmienia nazwę pliku lub katalogu.</li>
+                        <li><span class="komendy">rm</span> - Usuwa plik.</li>
+                        <li><span class="komendy">nano</span> lub <span class="komendy">vi</span> - Edytory tekstowe do edycji plików.</li>
+                    </ul>
+                    <h3>1.3. Informacje o systemie:</h3>
+                    <ul>
+                        <li><span class="komendy">uname -a</span> - Wyświetla informacje o systemie.</li>
+                        <li><span class="komendy">df -h</span> - Wyświetla informacje o przestrzeni dyskowej.</li>
+                        <li><span class="komendy">free -h</span> - Wyświetla informacje o pamięci.</li>
+                        
+                    </ul>
+                    <h3>1.4. Zarządzanie użytkownikami:</h3>
+                    <ul>
+                        <li><span class="komendy">sudo adduser [nazwa_użytkownika]</span> - Dodaje nowego użytkownika.</li>
+                        <li><span class="komendy">sudo passwd [nazwa_użytkownika]</span> - Zmienia hasło użytkownika.</li>
+                        <li><span class="komendy">sudo deluser [nazwa_użytkownika]</span> - Usuwa użytkownika.</li>
+                    </ul>
+                    <h3>1.5. Zarządzanie pakietami:</h3>
+                    <ul>
+                        <li><span class="komendy">sudo apt update</span> - Aktualizuje listę dostępnych pakietów.</li>
+                        <li><span class="komendy">sudo apt upgrade</span> - Aktualizuje zainstalowane pakiety.</li>
+                        <li><span class="komendy">sudo apt install</span> - Instaluje nowy pakiet.</li>
+                        <li><span class="komendy">sudo apt remove</span> - Usuwa zainstalowany pakiet.</li>
+                    </ul>
+                    <h2>2. Ćwiczenia praktyczne</h2>
+                    <h4>Ćwiczenie 1: Nawigacja w systemie plików:</h4>
+                    <ol>
+                        <li>Otwórz terminal.</li>
+                        <li>Sprawdź bieżący katalog: <span class="komendy">pwd</span></li>
+                        <li>Przejdź do katalogu domowego: <span class="komendy">cd ~</span></li>
+                        <li>Wyświetl zawartość katalogu domowego: <span class="komendy">ls</span></li>
+                        <li>Utwórz nowy katalog o nazwie <span class="komendy">test: mkdir test</span></li>
+                        <li>Przejdź do katalogu: <span class="komendy">test: cd test</span></li>
+                        <li>Utwórz nowy plik o nazwie: <span class="komendy">plik.txt: touch plik.txt</span></li>
+                        <li>Wyświetl zawartość katalogu: <span class="komendy">test: ls</span></li>
+                        <li>Usuń plik <span class="komendy">plik.txt: rm plik.txt</span></li>
+                        <li>Usuń katalog <span class="komendy">test: cd .. && rmdir test</span></li>
+                    </ol>
+                    <h4>Ćwiczenie 2: Zarządzanie użytkownikami:</h4>
+                    <ol>
+                        <li>Dodaj nowego użytkownika o nazwie <span class="komendy">student: sudo adduser student</span></li>
+                        <li>Zmień hasło użytkownika <span class="komendy">student: sudo passwd student</span></li>
+                        <li>Zaloguj się jako użytkownik <span class="komendy">student: su student</span></li>
+                        <li>Wyloguj się z użytkownika <span class="komendy">student: exit</span></li>
+                        <li>Usuń użytkownika <span class="komendy">student: sudo deluser student</span></li>
+                    </ol>
+                    <h4>Ćwiczenie 3: Zarządzanie pakietami:</h4>
+                    <ol>
+                        <li>Zaktualizuj listę dostępnych pakietów: <span class="komendy">sudo apt update</span></li>
+                        <li>Zainstaluj edytor tekstu <span class="komendy">nano: sudo apt install nano</span></li>
+                        <li>Utwórz plik i edytuj go za pomocą <span class="komendy">nano: nano testfile.txt</span></li>
+                        <li>Zapisz zmiany i wyjdź z edytora <span class="komendy">(Ctrl+O i Ctrl+X).</span></li>
+                        <li>Usuń pakiet <span class="komendy">nano: sudo apt remove nano</span></li>
+                    </ol>
+                    <h4>Ćwiczenie 4: Informacje o systemie:</h4>
+                    <ol>
+                        <li>Wyświetl informacje o systemie: <span class="komendy">uname -a</span></li>
+                        <li>Sprawdź użycie dysku: <span class="komendy">df -h</span></li>
+                        <li>Sprawdź użycie pamięci: <span class="komendy">free -h</span></li>
+                    </ol>
+                    <h2>3. Zarządzanie Usługami i Procesami</h2>
+                    <h3>3.1. Systemd:</h3>
+                    <ul>
+                        <li><span class="komendy">systemctl start [nazwa_uslugi]</span> - Uruchamia usługę.</li>
+                        <li><span class="komendy">systemctl stop [nazwa_uslugi]</span> - Zatrzymuje usługę.</li>
+                        <li><span class="komendy">systemctl restart [nazwa_uslugi]</span> - Restartuje usługę.</li>
+                        <li><span class="komendy">systemctl status [nazwa_uslugi]</span> - Wyświetla status usługi.</li>
+                        <li><span class="komendy">systemctl enable [nazwa_uslugi]</span> - Umożliwia automatyczne uruchamianie usługi podczas startu systemu.</li>
+                        <li><span class="komendy">systemctl disable [nazwa_uslugi]</span> - Wyłącza automatyczne uruchamianie usługi podczas startu systemu.</li>
+                    </ul>
+                    <h3>3.2. Zarządzanie procesami:</h3>
+                    <ul>
+                        <li><span class="komendy">ps aux</span> - Wyświetla listę wszystkich procesów.</li>
+                        <li><span class="komendy">top</span> - Wyświetla dynamiczną listę procesów.</li>
+                        <li><span class="komendy">kill [PID]</span> - Zakończenie procesu o podanym PID.</li>
+                        <li><span class="komendy">killall [nazwa_procesu]</span> - Zakończenie wszystkich procesów o podanej nazwie.</li>
+                    </ul>
+                    <h4>Ćwiczenie 5: Zarządzanie usługami</h4>
+                    <ol>
+                        <li>Sprawdź status usługi <span class="komendy">ssh: systemctl status ssh</span></li>
+                        <li>Uruchom usługę <span class="komendy">ssh: sudo systemctl start ssh</span></li>
+                        <li>Zrestartuj usługę <span class="komendy">ssh: sudo systemctl restart ssh</span></li>
+                        <li>Zatrzymaj usługę <span class="komendy">ssh: sudo systemctl stop ssh</span></li>
+                    </ol>
+                    <h4>Ćwiczenie 6: Zarządzanie procesami</h4>
+                    <ol>
+                        <li>Wyświetl listę wszystkich procesów: <span class="komendy">ps aux</span></li>
+                        <li>Znajdź proces o nazwie <span class="komendy">bash: pgrep bash</span></li>
+                        <li>Wyświetl dynamiczną listę procesów: <span class="komendy">top</span></li>
+                        <li>Zakończ proces <span class="komendy">top</span> naciskając <span class="komendy">q</span></li>
+                    </ol>
+                    <p>Te podstawowe informacje i ćwiczenia praktyczne pomogą Ci lepiej zrozumieć i administrować systemem Linux Ubuntu. W miarę jak będziesz zdobywać doświadczenie, możesz zgłębiać bardziej zaawansowane tematy, takie jak zarządzanie sieciami, bezpieczeństwo systemu, skrypty shellowe i wiele innych.</p>   
+                </article>               
+            </section>
+            <footer>Marian Gajewski, Dawid Pozorski, 1I2. 2024</footer>
+        </div>
+    </body>
+</html>

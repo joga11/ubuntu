@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <!-- kodowanie polskich znaków -->
+        <meta charset="UTF-8">
+        <!-- sposób wyświetlania na urządzenich mobilnych -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- tytuł strony, m.in. w wynikach wyszukiwania-->
+        <title>Ubuntu</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+        <link rel="icon" href="favicon.ico">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <header>
+                <img src="linux_green_3.jpg" alt="Linux pingwin"/>
+            </header>
+            <nav>
+                <a class="menu" href="info-o-ubuntu.html">INFO o UBUNTU</a>
+                <a class="menu" href="wprowadzenie.html">WPROWADZENIE</a>
+                <a class="menu active" href="konsola.html">KONSOLA</a>
+                <a class="menu" href="instalacja.html">INSTALACJA</a>
+            </nav>
+            <section>
+                <center><div class="home">
+                            <a href="index.html">
+                        <img src="green_home.jpg" width=50px height=50px alt="Linux pingwin"/>
+                            </a>
+                        </div>
+                </center>
+                <article>
+                    <h1>Konsola w Ubuntu</h1>
+                        <h2>1. Kombinacja klawiszy</h2>
+                            <p>Najprostszym sposobem na otwarcie konsoli (terminala) jest użycie skrótu klawiszowego:</p>
+                            <!-- span klasa tekst-bold-klawisze - formatowanie tekstu dla wyróżnienia nazw klawiszy fizycznych/klawiatury -->
+                                <ul>
+                                    <li><span class="tekst-bold-klawisze">Ctrl</span> + <span class="tekst-bold-klawisze">Alt</span> + <span class="tekst-bold-klawisze">T</span></li>
+                                </ul>
+                            <p>Naciśnij jednocześnie te klawisze, aby otworzyć terminal.</p>
+                        <h2>2. Przez menu aplikacji</h2>
+                        <!-- span klasa tekst-bold-ui - formatowanie tekstu dla wyróżnienia nazw elementów interfejsu użytkownika, przycisków oprogramowania, opcji menu itp. -->
+                                <ol>
+                                    <li>Kliknij przycisk "<span class="tekst-bold-ui">Activities</span>" (Aktywności) w lewym górnym rogu ekranu lub naciśnij klawisz <span class="tekst-bold-klawisze">Super</span> (zwykle oznaczony jako klawisz Windows na klawiaturze).</li>
+                                    <li>Wpisz "<span class="tekst-bold-ui">Terminal</span>" w polu wyszukiwania.</li>
+                                    <li>Kliknij ikonę <span class="tekst-bold-ui">Terminal</span> w wynikach wyszukiwania.</li>
+                                </ol>
+                        <h2>3. Przez pasek boczny</h2>
+                            <p>Jeśli terminal jest już przypięty do paska bocznego (docka), możesz go uruchomić, klikając ikonę terminala bezpośrednio na pasku bocznym.</p>
+                        <h2>4. Przez menu kontekstowe pulpitu</h2>
+                                <ol>
+                                    <li>Kliknij prawym przyciskiem myszy na pulpicie.</li>
+                                    <li>Wybierz opcję "<span class="tekst-bold-ui">Otwórz terminal tutaj</span>" lub podobną (zależnie od zainstalowanego środowiska graficznego).</li>
+                                </ol>
+                        <h2>5. Przez menu aplikacji (Gnome Terminal)</h2>
+                                <ol>
+                                    <li>Kliknij przycisk "<span class="tekst-bold-ui">Show Applications</span>" (Pokaż aplikacje) w lewym dolnym rogu ekranu.</li>
+                                    <li>Przewiń do pozycji "<span class="tekst-bold-ui">Terminal</span>" lub wpisz "<span class="tekst-bold-ui">Terminal</span>" w polu wyszukiwania.</li>
+                                    <li>Kliknij ikonę <span class="tekst-bold-ui">Terminal</span>.</li>
+                                </ol>
+                        <h2>6. Przez TTY (tryb tekstowy)</h2>
+                            <p>Jeśli GUI (interfejs graficzny użytkownika) nie działa lub chcesz przejść do trybu tekstowego, możesz użyć terminala TTY:</p>
+                                <ol>
+                                    <li>Naciśnij kombinację klawiszy <span class="tekst-bold-klawisze">Ctrl</span> + <span class="tekst-bold-klawisze">Alt</span> + <span class="tekst-bold-klawisze">F3</span> (lub F2 do F6).</li>
+                                    <li>Zaloguj się, używając swojej nazwy użytkownika i hasła.</li>
+                                </ol>
+                            <p>Aby powrócić do trybu graficznego, naciśnij <span class="tekst-bold-klawisze">Ctrl</span> + <span class="tekst-bold-klawisze">Alt</span> + <span class="tekst-bold-klawisze">F1</span> (lub F7, zależnie od wersji Ubuntu).</p>
+                        <h2>Podsumowanie</h2>
+                            <p>Wszystkie te metody pozwolą Ci uruchomić konsolę w systemie Ubuntu. Najszybsza i najwygodniejsza jest zazwyczaj kombinacja klawiszy <span class="tekst-bold-klawisze">Ctrl</span> + <span class="tekst-bold-klawisze">Alt</span> + <span class="tekst-bold-klawisze">T</span>, ale warto znać różne sposoby, aby móc dostosować się do różnych sytuacji i potrzeb.</p>
+                </article>               
+            </section>
+            <footer>Marian Gajewski, Dawid Pozorski, 1I2. 2024</footer>
+        </div>
+    </body>
+</html>
